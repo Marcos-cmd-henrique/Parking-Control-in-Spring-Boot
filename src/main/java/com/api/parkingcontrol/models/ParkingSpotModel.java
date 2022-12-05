@@ -4,9 +4,9 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -18,7 +18,7 @@ public class ParkingSpotModel implements Serializable{
 
     
     @Id
-    @Generated(strategy = GenerationType.AUTO) //ID gerados de forma automatica 
+    @GeneratedValue(strategy = GenerationType.AUTO) //ID gerados de forma automatica 
     private UUID id; //identificadores únicos
     @Column(nullable = false, unique = true, length =10) //campo unico p/ não ter 2 cadastro de uma mesma vaga 
     private String parkingSpotNumber; //Número da vaga

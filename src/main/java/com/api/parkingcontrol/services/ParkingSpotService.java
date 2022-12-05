@@ -9,7 +9,7 @@ import com.api.parkingcontrol.repositories.ParkingSpotRepository;
 public class ParkingSpotService {
     
   
-    ParkingSpotRepository parkingSpotRepository;
+    final ParkingSpotRepository parkingSpotRepository;
 
     public ParkingSpotService(ParkingSpotRepository parkingSpotRepository) {
         this.parkingSpotRepository = parkingSpotRepository;

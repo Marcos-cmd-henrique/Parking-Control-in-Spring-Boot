@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.api.parkingcontrol.models.ParkingSpotModel;
 import com.api.parkingcontrol.repositories.ParkingSpotRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class ParkingSpotService {
     
@@ -16,8 +18,9 @@ public class ParkingSpotService {
         this.parkingSpotRepository = parkingSpotRepository;
     }
 
-    public Object save(ParkingSpotModel parkingSpotModel) {
-        return null;
+    @Transactional
+    public ParkingSpotModel save(ParkingSpotModel parkingSpotModel) {
+        return parkingSpotRepository.save(parkingSpotModel); 
     } 
 
 }

@@ -1,4 +1,4 @@
-package com.api.parkingcontrol.controller;
+package com.api.parkingcontrol.controllers;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -23,6 +23,7 @@ import jakarta.validation.Valid;
 @RequestMapping("/parking-spot")
 public class ParkingSpotController {
 
+    
     final ParkingSpotService parkingSpotService;
 
     public ParkingSpotController(ParkingSpotService parkingSpotService) {
